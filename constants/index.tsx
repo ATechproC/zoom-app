@@ -11,6 +11,7 @@ import schedule from "../public/icons/schedule.svg";
 import video from "../public/icons/Video.svg";
 import avatar from "../public/images/avatar-1.jpeg";
 import copy from "../public/icons/copy.svg";
+import icon from "../public/icons/icon.png";
 
 export const assets = {
     home,
@@ -26,6 +27,7 @@ export const assets = {
     video,
     avatar,
     copy,
+    icon,
 };
 
 export const sideBarLinks = [

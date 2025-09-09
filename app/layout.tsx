@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { MeetingModalProvider } from "@/contexts/MeetingModalContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,11 +29,13 @@ export default function RootLayout({
         },
       }}
     >
-      <html lang="en">
-        <body className="bg-[#161925]">
-          {children}
-        </body>
-      </html>
+      <MeetingModalProvider>
+        <html lang="en">
+          <body className="bg-[#161925]">
+            {children}
+          </body>
+        </html>
+      </MeetingModalProvider>
     </ClerkProvider>
   );
 }

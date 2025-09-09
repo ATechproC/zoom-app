@@ -6,7 +6,7 @@ import { UserButton } from '@clerk/nextjs'
 
 function NavBar() {
   return (
-    <div className='w-full m-auto flex-between'>
+    <div className='max-sm:w-[97%] m-auto flex-between'>
       <div className='pt-1 cursor-pointer md:hidden'>
         <Image src={assets.logo} alt='logo' width={40} height={40} />
       </div>

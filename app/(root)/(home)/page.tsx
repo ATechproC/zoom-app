@@ -1,6 +1,5 @@
-import CustomHomeBos from '@/components/CustomHomeBos';
+import HomeCards from '@/components/HomeCards';
 import UpComingMeeting from '@/components/UpComingMeeting';
-import { assets } from '@/constants';
 import React from 'react'
 
 function Home() {
@@ -14,7 +13,7 @@ function Home() {
     const currentDay = newDate.toDateString();
 
     return (
-        <section className='md:center-element m-auto h-screen max-w-[90%] mt-5'>
+        <section className='md:center-element m-auto h-screen max-sm:w-[87%] md:max-w-[90%] mt-5'>
             <div className='relative w-full h-full bg-cover bg-heroBg max-h-[200px] m-auto rounded-[8px]'>
                 <div className='relative px-3 py-1 text-sm rounded-md w-fit bg-red top-3 left-5 bg-glass'
                 >Upcoming meeting at : 12:04 PM</div>
@@ -23,12 +22,7 @@ function Home() {
                     <p>{currentDay}</p>
                 </div>
             </div>
-            <div className='flex flex-col items-center gap-4 mt-4 md:flex-row'>
-                <CustomHomeBos icon={assets.add} title="New Meeting" desc="Setup a new recording" bgColor="#FF742E" />
-                <CustomHomeBos icon={assets.join} title="Join Meeting" desc="via invitation link" bgColor="#0E78F9" />
-                <CustomHomeBos icon={assets.schedule} title="Schedule Meeting" desc="Plan your meeting" bgColor="#830EF9" />
-                <CustomHomeBos icon={assets.video} title="View Recordings" desc="Meeting recordings" bgColor="#F9A90E"/>
-            </div>
+            <HomeCards />
             <UpComingMeeting />
         </section>
     )
