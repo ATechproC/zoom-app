@@ -1,6 +1,7 @@
 
 import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
+import StreamVideoProvider from '@/providers/StreamClientProvider';
 import React from 'react'
 
 function RootLayout({children} : {children : React.ReactNode}) {
@@ -8,7 +9,7 @@ function RootLayout({children} : {children : React.ReactNode}) {
         <main>
             <SideBar/>
             <NavBar />
-            {children}
+            <StreamVideoProvider>{children}</StreamVideoProvider>
         </main>
     )
 }

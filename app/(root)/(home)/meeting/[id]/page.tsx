@@ -1,7 +1,7 @@
 
 function MeetingRooms({params : {id }} : {params : {id : string}}) {
     return (
-        <div className="bg-red-600">MeetingRooms : {id} </div>
+        <div className="text-center bg-red-600">MeetingRooms : {id} </div>
     )
 }
 
