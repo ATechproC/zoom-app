@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image'
-import { useMeetingModal } from '@/contexts/MeetingModalContext'
+import { useMeetingModal } from '@/providers/MeetingModalContext'
 
 interface CustomHomeBoxProps {
     icon: string;

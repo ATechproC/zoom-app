@@ -10,7 +10,7 @@ function SideBar() {
     const pathName = usePathname();
 
     return (
-        <div className="fixed max-sm:hidden bg-[#1C1F2E] w-[200px] p-3">
+        <div className="fixed z-20 max-sm:hidden bg-[#1C1F2E] w-[200px] p-3">
             <Link href="/">
                 <div className="flex items-center gap-2 p-2">
                     <Image src={assets.logo} alt="" width={40} height={40} />

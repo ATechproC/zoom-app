@@ -23,7 +23,7 @@ const MeetingModalContext = createContext({} as MeetingModalProps);
 
 export const MeetingModalProvider = ({ children }: { children: React.ReactNode }) => {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const [modalTitle, setModalTitle] = useState<string>("");
 

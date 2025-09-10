@@ -16,6 +16,15 @@ body {
   @apply h-screen text-white bg-dark-2;
 }
 
+
+/* @layer components {
+  .str-video__device-settings {
+    @apply w-[300px] bg-dark-2 p-3 rounded-lg;
+  }
+} */
+
+
+
 @layer utilities {
   .flex-between {
     @apply flex items-center justify-between
@@ -24,45 +33,53 @@ body {
   .flex-center {
     @apply flex items-center justify-center
   }
-  
+
   .flex-items {
     @apply flex items-center
-  } 
-  
+  }
+
   .center-element {
-    @apply absolute w-[75%] right-7 
+    @apply absolute w-[75%] right-7
   }
 
   .userImg {
     @apply relative -left-5
   }
 
+  .str-video__device-settings {
+    @apply w-72 !important
+    /* 288px */
+  }
+
+
   @keyframes feedIn {
     0% {
-      opacity : 0;
+      opacity: 0;
       display: none;
     }
+
     100% {
-      opacity : 1;
+      opacity: 1;
     }
   }
 
   @keyframes feedOut {
     0% {
-      opacity : 1;
+      opacity: 1;
     }
+
     100% {
-      opacity : 0;
-      display : none;
+      opacity: 0;
+      display: none;
     }
   }
 
-  .open  {
-    animation : feedIn .1s ease forwards;
+  .open {
+    animation: feedIn .1s ease forwards;
   }
 
   .close {
-    animation : feedOut .5s ease forwards;
+    animation: feedOut .5s ease forwards;
   }
 
 }
@@ -80,6 +97,7 @@ body {
 .cl-logoBox {
   height: 40px;
 }
+
 .cl-dividerLine {
   background: #252a41;
   height: 2px;
@@ -92,6 +110,7 @@ body {
 .cl-internal-wkkub3 {
   color: white;
 }
+
 .cl-userButtonPopoverActionButton {
   color: white;
 }

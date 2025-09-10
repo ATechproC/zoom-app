@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import '@stream-io/video-react-sdk/dist/css/styles.css';
+import "react-datepicker/dist/react-datepicker.css";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import { MeetingModalProvider } from "@/contexts/MeetingModalContext";
+import { MeetingModalProvider } from "@/providers/MeetingModalContext";
+import ToastProvider from "@/providers/ToastProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,11 +33,11 @@ export default function RootLayout({
       }}
     >
       <MeetingModalProvider>
-        <html lang="en">
-          <body className="bg-[#161925]">
-            {children}
-          </body>
-        </html>
+        <ToastProvider>
+          <html lang="en">
+            <body className="bg-[#161925]">{children}</body>
+          </html>
+        </ToastProvider>
       </MeetingModalProvider>
     </ClerkProvider>
   );
