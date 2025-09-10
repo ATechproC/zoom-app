@@ -60,7 +60,7 @@ const MeetingModal = () => {
     };
 
     const {
-        states: { isOpen, modalTitle, btnContent },
+        states: { isOpen, modalTitle, btnContent, child,  buttonType },
         setStates: { setIsOpen },
     } = useMeetingModal();
 
@@ -84,12 +84,18 @@ const MeetingModal = () => {
                     <Image src={assets.icon} alt="" width={20} height={20} />
                 </div>
                 <h1 className="mb-2">{modalTitle}</h1>
+                {child}
                 <button
-                    onClick={createMeeting}
+                    onClick={() => {
+                        if(buttonType === "Create Meeting") {
+                            // add a function here to create meeting
+                        }else {
+                            createMeeting();
+                        }
+                    }}
                     className="bg-[#0E78F9] w-full mb-2  px-3 py-1 rounded-md"
                 >
-                    {" "}
-                    {btnContent}{" "}
+                    {btnContent}
                 </button>
             </div>
         </>

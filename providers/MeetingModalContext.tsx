@@ -1,17 +1,21 @@
 "use client";
 
-import { createContext, Dispatch, SetStateAction, useContext, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react";
 
 interface StatesProps {
     isOpen : boolean;
     modalTitle : string;
     btnContent : string;
+    child : ReactNode;
+    buttonType : string;
 }
 
 interface SetStatesProps {
     setIsOpen :  Dispatch<SetStateAction<boolean>>;
     setModalTitle : Dispatch<SetStateAction<string>>;
     setBtnContent :  Dispatch<SetStateAction<string>>;
+    setChild : Dispatch<SetStateAction<ReactNode>>;
+    setButtonType : Dispatch<SetStateAction<string>>;
 }
 
 interface MeetingModalProps {
@@ -29,13 +33,17 @@ export const MeetingModalProvider = ({ children }: { children: React.ReactNode }
 
     const [btnContent, setBtnContent] = useState<string>("");
 
+    const [buttonType, setButtonType] = useState<string>("");
+
+    const [child, setChild] = useState<ReactNode>()
+
     const states : StatesProps = {
         isOpen,
-        modalTitle, btnContent
+        modalTitle, btnContent,child, buttonType
     }
 
     const setStates : SetStatesProps = {
-        setIsOpen, setModalTitle, setBtnContent
+        setIsOpen, setModalTitle, setBtnContent, setChild, setButtonType
     }
 
     return <MeetingModalContext.Provider value={{ states, setStates}} >

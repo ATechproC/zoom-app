@@ -2,8 +2,10 @@
 
 import Image from 'next/image'
 import { useMeetingModal } from '@/providers/MeetingModalContext'
+import { Children, ReactNode } from 'react';
 
 interface CustomHomeBoxProps {
+    children? : ReactNode;
     icon: string;
     title: string;
     desc: string;
@@ -11,19 +13,21 @@ interface CustomHomeBoxProps {
     modalTitle?: string;
     btnContent?: string;
     isOpenModal: boolean;
+    buttonType? : string;
 }
 
-function CustomHomeBox({ icon, title, desc, bgColor, modalTitle, btnContent, isOpenModal }: CustomHomeBoxProps) {
+function CustomHomeBox({ icon, title,buttonType, desc, bgColor, children, modalTitle, btnContent, isOpenModal }: CustomHomeBoxProps) {
 
-    const { setStates: { setIsOpen, setModalTitle, setBtnContent } } = useMeetingModal();
+    const { setStates: { setIsOpen, setModalTitle, setBtnContent, setChild , setButtonType} } = useMeetingModal();
 
     return <section
-
         onClick={() => {
             if (isOpenModal) {
                 setIsOpen(true);
                 setModalTitle(modalTitle!);
                 setBtnContent(btnContent!);
+                setChild(children);
+                setButtonType(buttonType!);
             }
         }}
 
