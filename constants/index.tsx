@@ -9,7 +9,10 @@ import add from "../public/icons/add-meeting.svg";
 import join from "../public/icons/join-meeting.svg";
 import schedule from "../public/icons/schedule.svg";
 import video from "../public/icons/Video.svg";
-import avatar from "../public/images/avatar-2.jpeg";
+import avatar1 from "../public/images/avatar-2.jpeg";
+import avatar2 from "../public/images/avatar-3.png";
+import avatar3 from "../public/images/avatar-4.png";
+import avatar4 from "../public/images/avatar-5.png";
 import copy from "../public/icons/copy.svg";
 import icon from "../public/icons/icon.png";
 import loader from "../public/icons/loading-circle.svg";
@@ -28,7 +31,10 @@ export const assets = {
     join,
     schedule,
     video,
-    avatar,
+    avatar1,
+    avatar2,
+    avatar3,
+    avatar4,
     copy,
     icon,
     loader,

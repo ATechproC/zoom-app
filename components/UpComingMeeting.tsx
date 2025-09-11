@@ -27,18 +27,21 @@ const UpComingMeeting = () => {
                     <div className="flex-col gap-2 flex-items md:flex-row">
                         <div className="mt-3 flex-items ">
                             <div className="w-[45px] h-[45px] rounded-full overflow-hidden">
-                                <Image className="object-contain w-full h-full" src={assets.avatar} alt="" width={40} height={40} />
+                                <Image className="object-contain w-full h-full" src={assets.avatar1} alt="" width={40} height={40} />
                             </div>
                             <div className=" relative -left-5 w-[45px] h-[45px] rounded-full overflow-hidden">
-                                <Image className="object-contain w-full h-full" src={assets.avatar} alt="" width={40} height={40} />
+                                <Image className="object-contain w-full h-full" src={assets.avatar2} alt="" width={40} height={40} />
                             </div>
                             <div className=" relative -left-10 w-[45px] h-[45px] rounded-full overflow-hidden">
-                                <Image className="object-contain w-full h-full" src={assets.avatar} alt="" width={40} height={40} />
+                                <Image className="object-contain w-full h-full" src={assets.avatar3} alt="" width={40} height={40} />
                             </div>
-                            <div className=" relative -left-14  w-[45px] h-[45px] rounded-full overflow-hidden">
+                            <div className=" relative -left-14 w-[45px] h-[45px] rounded-full overflow-hidden">
+                                <Image className="object-contain w-full h-full" src={assets.avatar4} alt="" width={40} height={40} />
+                            </div>
+                            <div className=" relative -left-[76px]  w-[45px] h-[45px] rounded-full overflow-hidden">
                                 <p className="object-contain w-full h-full bg-[#1E2757] flex-center" >+9</p>
                             </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,15 +62,18 @@ const UpComingMeeting = () => {
                     <div className="flex-col gap-2 flex-items md:flex-row">
                         <div className="mt-3 flex-items">
                             <div className="w-[45px] h-[45px] rounded-full overflow-hidden">
-                                <Image className="object-contain w-full h-full" src={assets.avatar} alt="" width={40} height={40} />
+                                <Image className="object-contain w-full h-full" src={assets.avatar1} alt="" width={40} height={40} />
                             </div>
                             <div className=" relative -left-5 w-[45px] h-[45px] rounded-full overflow-hidden">
-                                <Image className="object-contain w-full h-full" src={assets.avatar} alt="" width={40} height={40} />
+                                <Image className="object-contain w-full h-full" src={assets.avatar2} alt="" width={40} height={40} />
                             </div>
                             <div className=" relative -left-10 w-[45px] h-[45px] rounded-full overflow-hidden">
-                                <Image className="object-contain w-full h-full" src={assets.avatar} alt="" width={40} height={40} />
+                                <Image className="object-contain w-full h-full" src={assets.avatar3} alt="" width={40} height={40} />
                             </div>
-                            <div className=" relative -left-14  w-[45px] h-[45px] rounded-full overflow-hidden">
+                            <div className=" relative -left-14 w-[45px] h-[45px] rounded-full overflow-hidden">
+                                <Image className="object-contain w-full h-full" src={assets.avatar4} alt="" width={40} height={40} />
+                            </div>
+                            <div className=" relative -left-[76px]  w-[45px] h-[45px] rounded-full overflow-hidden">
                                 <p className="object-contain w-full h-full bg-[#1E2757] flex-center" >+9</p>
                             </div>
                         </div>

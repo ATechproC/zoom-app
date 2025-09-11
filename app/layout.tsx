@@ -5,7 +5,6 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { MeetingModalProvider } from "@/providers/MeetingModalContext";
 import ToastProvider from "@/providers/ToastProvider";
-import { FormProvider } from "@/providers/FormProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,11 +34,9 @@ export default function RootLayout({
     >
       <MeetingModalProvider>
         <ToastProvider>
-          <FormProvider>
-            <html lang="en">
-              <body className="bg-[#161925]">{children}</body>
-            </html>
-          </FormProvider>
+          <html lang="en">
+            <body className="bg-[#161925]">{children}</body>
+          </html>
         </ToastProvider>
       </MeetingModalProvider>
     </ClerkProvider>
