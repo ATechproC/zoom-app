@@ -1,8 +1,9 @@
 import React from 'react'
+import CallList from './CallList'
 
 function Previous() {
   return (
-    <div>Previous</div>
+    <CallList type="ended" />
   )
 }
 

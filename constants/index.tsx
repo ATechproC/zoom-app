@@ -9,10 +9,12 @@ import add from "../public/icons/add-meeting.svg";
 import join from "../public/icons/join-meeting.svg";
 import schedule from "../public/icons/schedule.svg";
 import video from "../public/icons/Video.svg";
-import avatar from "../public/images/avatar-1.jpeg";
+import avatar from "../public/images/avatar-2.jpeg";
 import copy from "../public/icons/copy.svg";
 import icon from "../public/icons/icon.png";
-import loader from "../public/icons/loading-circle.svg"
+import loader from "../public/icons/loading-circle.svg";
+import checked from "../public/icons/checked.svg";
+
 
 export const assets = {
     home,
@@ -29,7 +31,8 @@ export const assets = {
     avatar,
     copy,
     icon,
-    loader
+    loader,
+    checked
 };
 
 export const sideBarLinks = [
@@ -58,4 +61,12 @@ export const sideBarLinks = [
         rout: "/personal-room",
         icon: assets.personalRoom,
     },
+];
+
+export const avatarImages = [
+    '/images/avatar-1.jpeg',
+    '/images/avatar-2.jpeg',
+    '/images/avatar-3.png',
+    '/images/avatar-4.png',
+    '/images/avatar-5.png',
 ];

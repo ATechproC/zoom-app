@@ -1,8 +1,9 @@
 import React from 'react'
+import CallList from './CallList'
 
 function Recording() {
     return (
-        <div>Recording</div>
+        <CallList type='recordings' />
     )
 }
 

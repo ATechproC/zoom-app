@@ -3,7 +3,9 @@ import React from 'react'
 
 function RecordingPage() {
     return (
-        <Recording />
+        <div>
+            <Recording />
+        </div>
     )
 }
 

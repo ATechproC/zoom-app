@@ -1,9 +1,7 @@
-import React from 'react'
+import CallList from './CallList'
 
 function Upcoming() {
-    return (
-        <div>Upcoming</div>
-    )
+    return <CallList type='upcoming' />
 }
 
 export default Upcoming

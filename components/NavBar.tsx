@@ -10,7 +10,7 @@ function NavBar() {
       <div className='pt-1 cursor-pointer md:hidden'>
         <Image src={assets.logo} alt='logo' width={40} height={40} />
       </div>
-      <div className="gap-3 p-2 md:bg-[#1C1F2E] md:w-full md:h-[37px] md:pt-2 flex-items">
+      <div className="md:fixed md:top-0 z-10 gap-3 p-2 md:bg-[#1C1F2E] md:w-full md:h-[37px] md:pt-2 flex-items">
         <div className='md:absolute right-4 top-1'>
         <UserButton />
         </div>

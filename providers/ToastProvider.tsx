@@ -4,12 +4,12 @@ import { createContext, Dispatch, SetStateAction, useContext, useState } from "r
 
 interface toastStatesProps {
     message : string;
-    isOpen : boolean;
+    isToastOpen : boolean;
 }
 
 interface toastSetStatesProps {
     setMessage : Dispatch<SetStateAction<string>>;
-    setIsOpen : Dispatch<SetStateAction<boolean>>;
+    setIsToastOpen : Dispatch<SetStateAction<boolean>>;
 }
 
 interface ToastProviderProps {
@@ -23,16 +23,16 @@ function ToastProvider({children} : {children : React.ReactNode}) {
 
     const [message, setMessage] = useState("");
 
-    const [isOpen, setIsOpen] = useState<boolean>(true);
+    const [isToastOpen, setIsToastOpen] = useState<boolean>(false);
 
     const toastStates = {
         message,
-        isOpen,
+        isToastOpen,
     }
 
     const toastSetStates = {
         setMessage, 
-        setIsOpen,
+        setIsToastOpen,
     }
 
     return <ToastContext.Provider value={{toastStates, toastSetStates}}>

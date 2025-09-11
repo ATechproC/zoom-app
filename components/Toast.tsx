@@ -7,21 +7,22 @@ import React, { useEffect } from 'react'
 
 const Toast = () => {
 
-    const {toastStates : {message, isOpen}, toastSetStates : {setIsOpen}} = useToast();
+    const {toastStates : {message, isToastOpen}, toastSetStates : {setIsToastOpen}} = useToast();
 
     useEffect(() => {
         setTimeout(() => {
-            setIsOpen(false);
+            setIsToastOpen(false);
         }, 2000)
-    }, [])
+    }, [isToastOpen, message])
 
     // if(message === "") return;
+    if(!isToastOpen) return;
 
     return (
-        <div className={` ${isOpen ? "block" : "hidden"} fixed flex-center z-30 top-4 left-[50%] w-full -translate-x-[50%] h-10 bg-dark-2 rounded-md max-w-[300px]`}>
+        <div className={`fixed flex-center z-30 top-4 left-[50%] w-full -translate-x-[50%] h-10 bg-dark-2 rounded-md max-w-[300px]`}>
             <div
             onClick={() => {
-                setIsOpen(false);
+                setIsToastOpen(false);
             }}
             className='absolute cursor-pointer right-2 top-1'>
                 <Image src={assets.icon} alt='' width={20} height={20} />

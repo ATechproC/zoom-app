@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const tailwindAnimate = require("tailwindcss-animate");
+
 module.exports = {
   darkMode: ['class'],
   content: [
@@ -15,13 +17,13 @@ module.exports = {
           3: '#252A41',
           4: '#1E2757',
         },
-        glass : "rgba(255,255,255,0.1)",
-        overlay : "rgba(0,0,0,0.4)"
+        glass: "rgba(255,255,255,0.1)",
+        overlay: "rgba(0,0,0,0.4)",
       },
-      backgroundImage : {
-        heroBg : "url('../public/images/hero-background.png')",
+      backgroundImage: {
+        heroBg: "url('../public/images/hero-background.png')",
       },
     },
   },
-  plugins: [],
+  plugins: [tailwindAnimate],
 };

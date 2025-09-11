@@ -1,15 +1,16 @@
 import { assets } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const UpComingMeeting = () => {
     return <section className="pb-5 mt-4">
-        <div className="mb-3 flex-between">
+        <div className="mb-3 text-center flex-between">
             <h1 className="font-bold font-xl">Today’s Upcoming Meetings</h1>
-            <button className="text-sm font-bold"> see all</button>
+            <Link href="/upcoming" className="text-sm font-bold"> see all</Link>
         </div>
-        <div className="flex-col w-full gap-3 md:gap-2 md:flex-row flex-items">
-            <div className="p-3 bg-[#1C1F2E] rounded-[5px] md:max-w-[370px] w-full">
+        <div className="flex-col flex-wrap justify-around w-full gap-3 md:gap-2 md:flex-row flex-items">
+            <div className="p-3 bg-[#1C1F2E] rounded-[5px] md:max-w-[360px] w-full">
                 <div className="flex flex-col gap-1 p-1 ">
                     <div className="p-[6px] bg-glass w-fit rounded-md">
                         <Image
@@ -37,18 +38,11 @@ const UpComingMeeting = () => {
                             <div className=" relative -left-14  w-[45px] h-[45px] rounded-full overflow-hidden">
                                 <p className="object-contain w-full h-full bg-[#1E2757] flex-center" >+9</p>
                             </div>
-                        </div>
-                        <div className="gap-3 -ml-11 flex-items">
-                            <button className="bg-[#0E78F9]  py-1 rounded-sm px-4">Start</button>
-                            <button className="bg-[#252A41] whitespace-nowrap rounded-sm px-4 flex-items gap-1 py-[7px]">
-                                <Image src={assets.copy} alt="copy" width={20} height={20} />
-                                <p className="text-sm">Copy Invitation</p>
-                            </button>
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
-            <div className="p-3 bg-[#1C1F2E] rounded-[5px] md:max-w-[380px] w-full">
+            <div className="p-3 bg-[#1C1F2E] rounded-[5px] md:max-w-[360px] w-full">
                 <div className="flex flex-col gap-1 p-1 ">
                     <div className="p-[6px] bg-glass w-fit rounded-md">
                         <Image
@@ -76,13 +70,6 @@ const UpComingMeeting = () => {
                             <div className=" relative -left-14  w-[45px] h-[45px] rounded-full overflow-hidden">
                                 <p className="object-contain w-full h-full bg-[#1E2757] flex-center" >+9</p>
                             </div>
-                        </div>
-                        <div className="gap-3 -ml-8 flex-items">
-                            <button className="bg-[#0E78F9]  py-1 rounded-sm px-4">Start</button>
-                            <button className="bg-[#252A41] whitespace-nowrap rounded-sm px-4 flex-items gap-1 py-[7px]">
-                                <Image src={assets.copy} alt="copy" width={20} height={20} />
-                                <p className="text-sm">Copy Invitation</p>
-                            </button>
                         </div>
                     </div>
                 </div>

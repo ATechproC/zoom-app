@@ -39,7 +39,7 @@ body {
   }
 
   .center-element {
-    @apply absolute w-[75%] right-7
+    @apply absolute w-[75%] right-7 mt-12
   }
 
   .userImg {
