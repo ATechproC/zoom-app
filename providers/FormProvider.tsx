@@ -1,17 +1,7 @@
 "use client";
 
-import { createContext, SetStateAction, useContext, useState } from "react";
-
-interface ValuesProps {
-    dateTime : Date;
-    description : string;
-    link : string;
-}
-
-interface FormProps {
-    values : ValuesProps;
-    setValues : React.Dispatch<SetStateAction<ValuesProps>>;
-}
+import { FormProps } from "@/types";
+import { createContext, useContext, useState } from "react";
 
 const FormContext = createContext({} as FormProps);
 

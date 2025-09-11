@@ -1,12 +1,9 @@
 "use client";
 
+import { CallContextType } from "@/types";
 import { Call } from "@stream-io/video-react-sdk";
 import { createContext, useContext, useState } from "react";
 
-interface CallContextType {
-    callDetail: Call | undefined;
-    setCallDetail: React.Dispatch<React.SetStateAction<Call | undefined>>;
-}
 
 const CallContext = createContext<CallContextType | undefined>(undefined);
 

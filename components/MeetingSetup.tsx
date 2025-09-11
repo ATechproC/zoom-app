@@ -6,9 +6,7 @@ import {
     useCall,
     useCallStateHooks,
 } from "@stream-io/video-react-sdk";
-
-// import Alert from './Alert';
-// import { Button } from './ui/button';
+import Alert from "./Alert";
 
 const MeetingSetup = ({
     setIsSetupComplete,
@@ -44,26 +42,24 @@ const MeetingSetup = ({
         }
     }, [isMicCamToggled, call.camera, call.microphone]);
 
-    // if (callTimeNotArrived)
-    // return (
-    //     <Alert
-    //         title={`Your Meeting has not started yet. It is scheduled for ${callStartsAt.toLocaleString()}`
-    //         }
-    //     />
-    // );
+    if (callTimeNotArrived)
+        return (
+            <Alert
+                title={`Your Meeting has not started yet. It is scheduled for ${callStartsAt.toLocaleString()}`}
+            />
+        );
 
-    // if (callHasEnded)
-    //     return (
-    //         <Alert
-    //             title="The call has been ended by the host"
-    //             iconUrl="/icons/call-ended.svg"
-    //         />
-    //     );
+    if (callHasEnded)
+        return (
+            <Alert
+                title="The call has been ended by the host"
+                iconUrl="/icons/call-ended.svg"
+            />
+        );
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-screen gap-3 text-white md:center-element">
-            {/* <h1 className="text-2xl font-bold text-center"> Setup </h1> */}
-            <VideoPreview className="max-sm:max-w-[300px]"/>
+            <VideoPreview className="max-sm:max-w-[300px]" />
             <div className="flex items-center justify-center h-16 gap-3">
                 <label className="flex items-center justify-center gap-2 font-medium">
                     <input
@@ -75,7 +71,7 @@ const MeetingSetup = ({
                 </label>
                 <DeviceSettings />
             </div>
-            < button
+            <button
                 className="rounded-md bg-green-500 px-4 py-2.5"
                 onClick={() => {
                     call.join();

@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 function SideBar() {
-
     const pathName = usePathname();
 
     return (
@@ -17,10 +16,9 @@ function SideBar() {
                     <p className="text-2xl font-bold text-white">Yoom</p>
                 </div>
             </Link>
-            <div
-                className="flex flex-col items-center h-screen gap-3 text-white">
+            <div className="flex flex-col items-center h-screen gap-3 text-white">
                 {sideBarLinks.map(({ rout, label, icon }, index) => {
-                    const isActive = pathName === rout ;
+                    const isActive = pathName === rout;
 
                     return (
                         <Link

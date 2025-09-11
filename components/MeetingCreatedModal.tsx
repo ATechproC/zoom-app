@@ -5,7 +5,6 @@ import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 
-
 import { assets } from "@/constants";
 import Image from "next/image";
 import { useMeetingModal } from "@/providers/MeetingModalContext";
@@ -13,14 +12,15 @@ import { useToast } from "@/providers/ToastProvider";
 import { useFormValues } from "@/providers/FormProvider";
 
 const MeetingModal = () => {
+    const { values } = useFormValues();
 
-    const {values} = useFormValues();
-    
     const [callDetail, setCallDetail] = useState<Call>();
     const client = useStreamVideoClient();
     const router = useRouter();
     const { user } = useUser();
-    const { toastSetStates : {setMessage} } = useToast();
+    const {
+        toastSetStates: { setMessage },
+    } = useToast();
 
     const createMeeting = async () => {
         if (!client || !user) return;

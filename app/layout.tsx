@@ -5,6 +5,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { MeetingModalProvider } from "@/providers/MeetingModalContext";
 import ToastProvider from "@/providers/ToastProvider";
+import { FormProvider } from "@/providers/FormProvider";
 
 export const metadata: Metadata = {
   title: "Yoom",
@@ -37,9 +38,11 @@ export default function RootLayout({
     >
       <MeetingModalProvider>
         <ToastProvider>
-          <html lang="en">
-            <body className="bg-[#161925]">{children}</body>
-          </html>
+          <FormProvider>
+            <html lang="en">
+              <body className="bg-[#161925]">{children}</body>
+            </html>
+          </FormProvider>
         </ToastProvider>
       </MeetingModalProvider>
     </ClerkProvider>

@@ -1,36 +1,13 @@
 "use client";
 
+import { MeetingModalProps, SetStatesProps, StatesProps } from "@/types";
 import {
     createContext,
-    Dispatch,
     ReactNode,
-    SetStateAction,
     useContext,
     useState,
 } from "react";
 
-interface StatesProps {
-    isOpen: boolean;
-    isMeetingCreated: boolean;
-    modalTitle: string;
-    btnContent: string;
-    child: ReactNode;
-    buttonType: string;
-}
-
-interface SetStatesProps {
-    setIsOpen: Dispatch<SetStateAction<boolean>>;
-    setModalTitle: Dispatch<SetStateAction<string>>;
-    setBtnContent: Dispatch<SetStateAction<string>>;
-    setChild: Dispatch<SetStateAction<ReactNode>>;
-    setButtonType: Dispatch<SetStateAction<string>>;
-    setIsMeetingCreated: Dispatch<SetStateAction<boolean>>;
-}
-
-interface MeetingModalProps {
-    states: StatesProps;
-    setStates: SetStatesProps;
-}
 
 const MeetingModalContext = createContext({} as MeetingModalProps);
 

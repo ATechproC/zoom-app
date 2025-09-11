@@ -1,12 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { Card, CardContent } from './ui/card';
-
-
-interface PermissionCardProps {
-    title: string;
-    iconUrl?: string;
-}
+import Link from "next/link";
+import Image from "next/image";
+import { Card, CardContent } from "./ui/card";
+import { PermissionCardProps } from "@/types";
 
 const Alert = ({ title, iconUrl }: PermissionCardProps) => {
     return (

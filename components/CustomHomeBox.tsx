@@ -2,20 +2,8 @@
 
 import Image from "next/image";
 import { useMeetingModal } from "@/providers/MeetingModalContext";
-import { ReactNode } from "react";
 import { useRouter } from "next/navigation";
-
-interface CustomHomeBoxProps {
-    children?: ReactNode;
-    icon: string;
-    title: string;
-    desc: string;
-    bgColor: string;
-    modalTitle?: string;
-    btnContent?: string;
-    isOpenModal: boolean;
-    buttonType?: string;
-}
+import { CustomHomeBoxProps } from "@/types";
 
 function CustomHomeBox({
     icon,
@@ -62,11 +50,11 @@ function CustomHomeBox({
                     setChild(children);
                 }
 
-                if(title === "Upcoming") {
+                if (title === "Upcoming") {
                     router.push("/upcoming");
                 }
 
-                if(title === "previous") {
+                if (title === "previous") {
                     router.push("/previous");
                 }
             }}

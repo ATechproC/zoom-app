@@ -1,21 +1,8 @@
 "use client";
 
-import { createContext, Dispatch, SetStateAction, useContext, useState } from "react";
+import { ToastProviderProps } from "@/types";
+import { createContext,  useContext, useState } from "react";
 
-interface toastStatesProps {
-    message : string;
-    isToastOpen : boolean;
-}
-
-interface toastSetStatesProps {
-    setMessage : Dispatch<SetStateAction<string>>;
-    setIsToastOpen : Dispatch<SetStateAction<boolean>>;
-}
-
-interface ToastProviderProps {
-    toastStates : toastStatesProps;
-    toastSetStates : toastSetStatesProps;
-}
 
 const ToastContext = createContext({} as ToastProviderProps);
 

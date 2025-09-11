@@ -11,17 +11,9 @@
   box-sizing: border-box;
 }
 
-/* Example: make the body full height and default background */
 body {
   @apply h-screen text-white bg-dark-2;
 }
-
-
-/* @layer components {
-  .str-video__device-settings {
-    @apply w-[300px] bg-dark-2 p-3 rounded-lg;
-  }
-} */
 
 
 @layer utilities {
@@ -29,10 +21,6 @@ body {
     @apply flex items-center justify-between
   }
 
-
-  /* Alternative approach for Clerk branding */
-  /* Hide Clerk dev mode & secured footer */
-  /* Hide Clerk dev mode footer inside popovers */
   [class*="cl-userButtonPopoverFooter"],
   [class*="cl-footer"],
   [class*="clerk-badge"] {
