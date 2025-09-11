@@ -261,19 +261,19 @@ const MeetingModal = () => {
         }
     };
 
-    const copyMeetingLink = () => {
-        if (callDetail?.id) {
-            navigator.clipboard.writeText(
-                `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail.id}`
-            );
-            setIsMeetingCreated(false);
-            setIsToastOpen(true);
-            setMessage("Link Copied");
-        } else {
-            setIsToastOpen(true);
-            setMessage("Error: Meeting ID not found");
-        }
-    };
+    // const copyMeetingLink = () => {
+    //     if (callDetail?.id) {
+    //         navigator.clipboard.writeText(
+    //             `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail.id}`
+    //         );
+    //         setIsMeetingCreated(false);
+    //         setIsToastOpen(true);
+    //         setMessage("Link Copied");
+    //     } else {
+    //         setIsToastOpen(true);
+    //         setMessage("Error: Meeting ID not found");
+    //     }
+    // };
 
     if (modalTitle === "") return null;
 
