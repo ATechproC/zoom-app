@@ -24,10 +24,41 @@ body {
 } */
 
 
-
 @layer utilities {
   .flex-between {
     @apply flex items-center justify-between
+  }
+
+  /* Hide Clerk development mode indicator */
+  .cl-internal-1dauv2k,
+  .cl-internal-1dm45ce,
+  .cl-footer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+  }
+
+  /* Alternative approach for Clerk branding */
+  .cl-internal-1dauv2k *,
+  .cl-internal-1dm45ce *,
+  [class*="cl-footer"] {
+    display: none !important;
+  }
+
+  /* Target specific text content */
+  .cl-internal-1dauv2k:not(:empty),
+  .cl-internal-1dm45ce:not(:empty) {
+    font-size: 0 !important;
+  }
+
+  .cl-internal-1dauv2k:not(:empty)::after,
+  .cl-internal-1dm45ce:not(:empty)::after {
+    content: '' !important;
+    display: none !important;
   }
 
   .flex-center {
